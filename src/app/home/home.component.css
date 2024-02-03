@@ -1,11 +1,31 @@
 .containerHome {
 
   
+   display: flex;
+   justify-content: space-between;
     width: 100% !important;
+    border-bottom: 1px solid black;
+    
+}
+
+.containerSearch {
+
+    width: auto;
+    max-width: 400px;
+    min-width: 400px;
+    height: 100% !important;
+    padding: 10px;
 
 }
 
+.titleMenu {
 
+    width: 100%;    
+    color: orange;
+    text-shadow: 2px 2px 2px black;
+    font-weight: 900;
+    font-size: 350%;
+}
 
 .textId {
 

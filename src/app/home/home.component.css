@@ -4,8 +4,14 @@
    display: flex;
    justify-content: space-between;
     width: 100% !important;
-    border-bottom: 1px solid black;
-    
+    border-bottom: 1px solid orange;
+background-color: rgb(52, 153, 220);
+}
+
+body {
+
+  
+
 }
 
 .containerSearch {
@@ -25,10 +31,57 @@
     text-shadow: 2px 2px 2px black;
     font-weight: 900;
     font-size: 350%;
+    position: relative;
+    bottom: 10px;
 }
 
 .textId {
 
 visibility: hidden;
+text-shadow: 2px 2px 2px black;
+color: orange;
+    font-size: 30px !important;
 
+}
+
+.buttonStyle {
+    transition: 1s;
+    background-color: orange;
+
+}
+
+.buttonStyle:hover {
+
+    background-color: rgb(52, 153, 220);
+
+}
+
+input[type="text"]
+{
+   color: orange;
+   font-weight: 900;
+}
+
+input::placeholder {
+   color: orange;
+   font-weight: 900;
+}
+
+.iconStyle {
+
+    color: orange;
+
+}
+
+.inputStyle {
+
+    border: 1px solid black;
+        outline-color: none !important;
+}
+
+.inputStyle:focus , .inputStyle:active {
+
+    border: 1px solid orange !important;
+    outline-color: none !important;
+    box-shadow: 2px 2px 2px black;
 }

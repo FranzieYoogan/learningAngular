@@ -1,0 +1,13 @@
+.containerHome {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 15em;
+
+}
+
+.textId {
+
+visibility: hidden;
+
+}

@@ -11,7 +11,7 @@ export class HomeComponent {
 
   random = Math.floor(Math.random() * 10) + 1;
   dataSearch: any
-
+  categories: any
   constructor (private http: HttpClient) {}
   Math: any;
 
@@ -26,9 +26,17 @@ export class HomeComponent {
 
   getSearch() {
 
+
+
     let search: any = document.getElementById('default-search')
     let text: any = document.getElementById('textId')
-    if(search.value == '') {
+    const result = search.value
+
+    if(result != 'animal' && result != 'career' && result != 'celebrity' && result != 'dev' && 
+    result != 'explicit' && result != 'fashion' && result != 'food' && result != 'history' && 
+    result != 'money' && result != 'movie' && result != 'music' &&  result != 'political' &&  
+    result != 'religion' &&  result != 'science' && result != 'sport' && result != 'travel' ) {
+    
       search.style.border = '2px solid red'
       setTimeout(() => {
         window.location.reload()
@@ -37,22 +45,19 @@ export class HomeComponent {
     
       }, 2000);
         
-         }
+         } if (result == 'animal' || result == 'career' || result == 'celebrity' || result == 'dev' || 
+         result == 'explicit' || result == 'fashion' || result == 'food' || result == 'history' || 
+         result == 'money' || result == 'movie' || result == 'music' ||  result == 'political' ||  
+         result == 'religion' ||  result == 'science' || result == 'sport' || result == 'travel' ) {
 
-    if(search.value != "") {
 
-
-  
-       const result = search.value
+          search.style.border = '2px solid green'
+     
       text.style.visibility = 'visible'
     
-      if(!result) {
-        console.log('sheesh')
-        search.style.border = '2px solid red'
-        search.style.background = 'red'
-      } else {
+
         
-      }
+      
       this.http.get(`https://api.chucknorris.io/jokes/search?query=${result}`).subscribe((response) => {
       
       console.log(response);
@@ -72,10 +77,7 @@ export class HomeComponent {
       });
 
 
-   
-        
-
-  
+ 
  
     }
 

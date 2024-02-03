@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
-import { Observable, catchError, retry } from 'rxjs';
-import { Value } from '../value.string';
+
 
 @Component({
   selector: 'app-home',
@@ -10,47 +9,83 @@ import { Value } from '../value.string';
 })
 export class HomeComponent {
 
+  random = Math.floor(Math.random() * 10) + 1;
+  dataSearch: any
+
+  constructor (private http: HttpClient) {}
+  Math: any;
+
+  Constructor() {
+
+      this.Math = Math;
+  }
 
 
-      newData: any
- 
 
-      constructor(private http: HttpClient) {}
 
+
+  getSearch() {
+
+    let search: any = document.getElementById('default-search')
+    let text: any = document.getElementById('textId')
+    if(search.value == '') {
+      search.style.border = '2px solid red'
+      setTimeout(() => {
+        window.location.reload()
      
-
-            getData(){
+     
     
-                const text:any = document.getElementById('textId')
+      }, 2000);
+        
+         }
 
-                text.style.visibility = 'visible'
-           
+    if(search.value != "") {
 
-              this.http.get("https://api.chucknorris.io/jokes/random").subscribe((response) => {
+
+  
+       const result = search.value
+      text.style.visibility = 'visible'
+    
+      if(!result) {
+        console.log('sheesh')
+        search.style.border = '2px solid red'
+        search.style.background = 'red'
+      } else {
+        
+      }
+      this.http.get(`https://api.chucknorris.io/jokes/search?query=${result}`).subscribe((response) => {
+      
+      console.log(response);
+      this.dataSearch = response
+      
+      setTimeout(() => {
+        window.location.reload()
+        return this.dataSearch
      
-              console.log(response);
-              this.newData = response
-            
-            
-              });
+    
+      }, 2000);
 
-              return this.newData
+
            
-          }
+    
+  
+      });
 
-         
-          
-       
 
-          
-            
-       
+   
+        
+
+  
+ 
+    }
+
+    }
         
          
-      
+  }
       
    
-  }
+  
 
 
     

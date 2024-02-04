@@ -66,6 +66,28 @@ export class HomeComponent {
 
   }
 
+  chuckTips2():any {
+
+      
+
+
+
+   
+    var currentTime = new Date().toLocaleString()
+    const bubbleChat2:any =  document.getElementById('bubbleChatContainer2')
+    const span2:any = document.getElementById('spanTime2')
+  console.log(currentTime)
+   bubbleChat2.style.visibility = 'visible'
+
+   const section: any = document.getElementById('contaner2Style')
+
+   section.style.opacity = '0.3'
+   return span2.innerHTML = currentTime.toString()
+
+
+
+  }
+
 
 ngOnInit(): void {
 

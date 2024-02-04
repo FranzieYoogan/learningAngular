@@ -32,7 +32,9 @@ background-color: rgb(52, 153, 220);
     color: orange;
     text-shadow: 2px 2px 2px black;
     font-weight: 900;
-    font-size: 350%;
+    font-size: 50px;
+    position: relative;
+    top: 5px;
 
 
 }
@@ -123,9 +125,11 @@ input::placeholder {
 .contaner2Style {
 
     height: auto;
-    max-height:75.8vh;
-    min-height: 75.8vh ; 
+    max-height:76.3vh;
+    min-height: 76.3vh ; 
+
     background: url('/assets/img/wallpaper.jpg') !important;
+    background-position-y: 20% !important;
     background-size: 100% !important;
     width: 100% !important;
  

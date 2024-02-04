@@ -23,6 +23,37 @@ export class HomeComponent {
 
 
 
+  closeMenu() {
+
+    const buttonClose: any = document.getElementById('bubbleChatContainer')
+    const section: any = document.getElementById('contaner2Style')
+
+    section.style.opacity = '1'
+
+    buttonClose.style.visibility ='hidden'
+
+    return buttonClose
+  }
+
+
+
+
+  chuckTips():any {
+
+
+    var currentTime = new Date().toLocaleString()
+    const bubbleChat:any =  document.getElementById('bubbleChatContainer')
+    const span:any = document.getElementById('spanTime')
+  console.log(currentTime)
+   bubbleChat.style.visibility = 'visible'
+
+   const section: any = document.getElementById('contaner2Style')
+
+   section.style.opacity = '0.3'
+   return span.innerHTML = currentTime.toString();
+}
+
+
 
   getSearch() {
 
@@ -82,6 +113,9 @@ export class HomeComponent {
     }
 
     }
+
+
+
         
          
   }

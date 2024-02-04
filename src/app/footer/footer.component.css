@@ -1,0 +1,56 @@
+.footerContainerStyle {
+
+
+    width: 100%;
+    background-color: rgb(52, 153, 220) !important;
+    color: orange !important;
+
+}
+
+span{
+
+    color: orange !important;
+    text-shadow: 2px 2px 2px black;
+    font-weight: 900;
+}
+
+.linkStyle {
+
+    box-shadow: 2px 2px 2px 2px black;
+    padding: 5px;
+    color: orange;
+background-color: white;
+font-weight: 900 !important;
+} 
+
+.linkStyle:hover {
+    color: rgb(52, 153, 220);;
+
+}
+
+.linkMeStyle {
+
+    border-bottom: 1px solid orange;
+    text-shadow: 2px 2px 2px black !important;
+    box-shadow:  none !important;
+    font-weight: 900;
+}
+
+.linkMeStyle:hover {
+
+    transition: 0.5s;
+    background: -webkit-linear-gradient(orange 50%, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none!important;
+} 
+
+footer {
+
+
+    position: absolute;
+    bottom: 0 !important;
+    margin: 0 !important;
+    width: 100%;
+
+}

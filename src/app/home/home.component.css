@@ -55,6 +55,7 @@ color: orange;
 .buttonStyle:hover {
 
     background-color: rgb(52, 153, 220);
+    
 
 }
 
@@ -65,7 +66,7 @@ input[type="text"]
 }
 
 input::placeholder {
-   color: orange;
+   color: rgb(255, 195, 85);
    font-weight: 900;
 }
 
@@ -120,12 +121,12 @@ input::placeholder {
 .contaner2Style {
 
     height: auto;
-    max-height:86.8vh;
-    min-height: 86.8vh ;
-
+    max-height:75.8vh;
+    min-height: 75.8vh ; 
     background: url('/assets/img/wallpaper.jpg') !important;
     background-size: 100% !important;
     width: 100% !important;
+ 
   
 }
 

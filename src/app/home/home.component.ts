@@ -32,6 +32,8 @@ export class HomeComponent {
 
     buttonClose.style.visibility ='hidden'
 
+    localStorage.setItem('clicked','clicked')
+
     return buttonClose
   }
 
@@ -40,7 +42,11 @@ export class HomeComponent {
 
   chuckTips():any {
 
+      if(localStorage.getItem('clicked')) {
 
+
+
+   
     var currentTime = new Date().toLocaleString()
     const bubbleChat:any =  document.getElementById('bubbleChatContainer')
     const span:any = document.getElementById('spanTime')
@@ -53,13 +59,27 @@ export class HomeComponent {
    return span.innerHTML = currentTime.toString();
 }
 
+  }
 
+
+ngOnInit(): void {
+
+  const searchValue:any = document.getElementById('inputStyle')
+searchValue.addEventListener('keypress', function (e: { key: string; }) {
+    if (e.key === 'Enter') {
+     const buttonSearch:any = document.getElementById('buttonSearch')
+
+     buttonSearch.click()
+    }
+});
+
+}
 
   getSearch() {
 
 
 
-    let search: any = document.getElementById('default-search')
+    let search: any = document.getElementById('inputStyle')
     let text: any = document.getElementById('textId')
     const result = search.value
 
@@ -71,9 +91,9 @@ export class HomeComponent {
       search.style.border = '2px solid red'
       setTimeout(() => {
         window.location.reload()
-     
-     
-    
+      
+   
+
       }, 2000);
         
          } if (result == 'animal' || result == 'career' || result == 'celebrity' || result == 'dev' || 

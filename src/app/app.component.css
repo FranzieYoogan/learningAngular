@@ -1,1 +1,14 @@
 
+@font-face {
+    font-family: pixel;
+    src: url('/assets/fonts/Minecraft.ttf');
+  }
+  
+
+
+
+  * {
+
+    font-family: pixel;
+
+  }

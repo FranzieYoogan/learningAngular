@@ -87,22 +87,34 @@ input::placeholder {
 
     background-color: transparent !important;
     color: orange !important;
-
+width: 0%;
+    border: 1px solid transparent;
+    transition: 0.5s;
 }   
 
-.spanCategories {
+
+ .dropDownStyle:active, .dropDownStyle:focus {
+
+
+    border-bottom: 1px orange solid;
+    width: 100%;
+    border-radius: 0px !important;
+     outline: none !important;
+    box-shadow: none !important;
+    
+    }   
+
+/* .spanCategories {
 
     border: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    width: 100%;
+    transition: 1s;
+} */
 
-}
 
-.dropDownStyle:hover, .dropDownStyle:active, .dropDownStyle:focus {
 
- border: none !important;
- outline: none !important;
-box-shadow: none !important;
 
-}   
 
 .inputStyle {
 

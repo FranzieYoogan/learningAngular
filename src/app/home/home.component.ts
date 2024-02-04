@@ -20,79 +20,11 @@ export class HomeComponent {
       this.Math = Math;
   }
 
-clickThing = 0
-  public dropDownEvent() {
-
-    const spanValue: any = document.getElementById('spanCategories')
-    const svgValue: any = document.getElementById('svgThing')
-
-   
-    spanValue.style.borderBottom = '1px solid orange'
-    svgValue.style.visibility = 'hidden'
-    spanValue.style.width = '0%'
-
-    setTimeout(() => {
-      spanValue.style.width = '100%'
-  
-    }, 50);
-    spanValue.style.transition = '0.5s'
-    
-  }
-
-  dropDownEvent2() {
-
-    const spanValue: any = document.getElementById('spanCategories')
-    const svgValue: any = document.getElementById('svgThing')
-    this.clickThing ++
-    console.log(this.clickThing)
-    if(this.clickThing == 2) {
-      this.clickThing = 0
-      spanValue.style.borderBottom = '1px solid orange'
-      svgValue.style.visibility = 'visible'
-      spanValue.style.width = '100%'
-  
-      setTimeout(() => {
-        spanValue.style.width = '0%'
-        svgValue.style.visibility = 'visible'
-      }, 50);
-      spanValue.style.transition = '0.5s'
-
-    } else {
-      spanValue.style.borderBottom = '1px solid orange'
-      svgValue.style.visibility = 'visible'
-      spanValue.style.width = '0%'
-  
-      setTimeout(() => {
-        spanValue.style.width = '100%'
-    
-      }, 50);
-      spanValue.style.transition = '0.5s'
-
-    }
- 
-    
-  }
-
-  dropDownEventCancel() {
-    this.clickThing  = 0
-    const spanValue: any = document.getElementById('spanCategories')
-    const svgValue: any = document.getElementById('svgThing')
 
 
 
-  
-    spanValue.style.width = '0%'
-    spanValue.style.transition = '0.5s'
-    setTimeout(() => {
-      spanValue.style.width = '100%'
-      spanValue.style.borderBottom = '1px solid transparent'
-      svgValue.style.visibility = 'visible'
-    }, 50);
 
 
-
-  
-  }
 
 
   closeMenu() {
@@ -104,7 +36,7 @@ clickThing = 0
 
     buttonClose.style.visibility ='hidden'
 
-    localStorage.setItem('clicked','clicked')
+    localStorage.setItem('value','clicked')
 
     return buttonClose
   }
@@ -113,8 +45,8 @@ clickThing = 0
 
 
   chuckTips():any {
-
-      if(localStorage.getItem('clicked')) {
+    console.log(localStorage.getItem('value'))
+      if(!localStorage.getItem('value')) {
 
 
 
@@ -128,8 +60,9 @@ clickThing = 0
    const section: any = document.getElementById('contaner2Style')
 
    section.style.opacity = '0.3'
-   return span.innerHTML = currentTime.toString();
-}
+   return span.innerHTML = currentTime.toString()
+
+} 
 
   }
 

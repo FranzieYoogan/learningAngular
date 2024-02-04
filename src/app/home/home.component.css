@@ -83,6 +83,27 @@ input::placeholder {
     
 }
 
+.dropDownStyle {
+
+    background-color: transparent !important;
+    color: orange !important;
+
+}   
+
+.spanCategories {
+
+    border: 1px solid transparent;
+
+}
+
+.dropDownStyle:hover, .dropDownStyle:active, .dropDownStyle:focus {
+
+ border: none !important;
+ outline: none !important;
+box-shadow: none !important;
+
+}   
+
 .inputStyle {
 
     border: 1px solid black;
@@ -146,9 +167,18 @@ input::placeholder {
     background-position-y: 20% !important;
     background-size: 100% !important;
     width: 100% !important;
- 
+    background-repeat: no-repeat;
   
 }
+
+@media only screen and (max-width: 500px) {
+    .contaner2Style {
+        background-size: 200% !important;
+        background-position-x: 50% !important;
+    }
+
+
+  }
 
 .textColorBubbleChat {
 

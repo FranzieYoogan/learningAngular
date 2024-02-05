@@ -66,6 +66,44 @@ color: orange;
 
 }
 
+.iconSendStyle2 {
+
+    color: white;
+}
+
+.buttonSearchStyle {
+
+    display: flex;
+    margin-top: 1em;
+   gap: 1em;
+   background-color: orange;
+   color: white;
+border: 2px solid black;
+display: none;
+}
+
+@media only screen and (max-width: 600px) {
+   .buttonSearchStyle {
+        display: block;
+        display: flex;
+        margin-top: 1em;
+       gap: 1em;
+       background-color: orange;
+       color: white;
+    border: 2px solid black;
+ 
+    }
+  }
+
+.buttonSearchStyle:active, .buttonSearchStyle:focus {
+
+   background-color: orange;
+   color: white;
+   background: linear-gradient(orange 40%, white);
+   outline: 2px solid orange;
+border: 2px solid black;
+}
+
 input[type="text"]
 {
    color: orange;

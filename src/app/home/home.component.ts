@@ -96,7 +96,7 @@ searchValue.addEventListener('keypress', function (e: { key: string; }) {
     if (e.key === 'Enter') {
      const buttonSearch:any = document.getElementById('buttonSearch')
 
-     buttonSearch.click()
+   return  buttonSearch.click()
     }
 });
 

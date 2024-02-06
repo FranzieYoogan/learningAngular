@@ -33,8 +33,13 @@ export class HomeComponent {
     const buttonClose: any = document.getElementById('bubbleChatContainer')
     const section: any = document.getElementById('contaner2Style')
     const search: any = document.getElementById('inputStyle')
+    const inputStyle:any = document.getElementById('inputStyle')
     section.style.opacity = '1'
 
+    inputStyle.style.cursor = 'text'
+    inputStyle.style.border = '1px solid black'
+    inputStyle.disabled = false
+    
     buttonClose.style.visibility ='hidden'
 
     search.style.border = '1px solid black'
@@ -43,10 +48,16 @@ export class HomeComponent {
   }
 
   closeMenu2() {
-
+    const inputStyle:any = document.getElementById('inputStyle')
     const categoriesButton: any = document.getElementById('dropdownDefaultButton')
     const buttonBubbleChat2: any = document.getElementById('bubbleChatContainer2')
     const section: any = document.getElementById('contaner2Style')
+
+
+    inputStyle.style.cursor = 'text'
+    inputStyle.style.border = '1px solid black'
+    inputStyle.disabled = false
+
 
     categoriesButton.style.borderBottom = '1px solid transparent'
     categoriesButton.style.width = '0%'
@@ -67,10 +78,12 @@ export class HomeComponent {
 
    
     var currentTime = new Date().toLocaleString()
+
     const bubbleChat:any =  document.getElementById('bubbleChatContainer')
     const span:any = document.getElementById('spanTime')
   console.log(currentTime)
    bubbleChat.style.visibility = 'visible'
+
 
    const section: any = document.getElementById('contaner2Style')
 
@@ -91,12 +104,19 @@ export class HomeComponent {
     var currentTime = new Date().toLocaleString()
     const bubbleChat2:any =  document.getElementById('bubbleChatContainer2')
     const span2:any = document.getElementById('spanTime2')
-
+    const inputStyle:any = document.getElementById('inputStyle')
 
   console.log(currentTime)
    bubbleChat2.style.visibility = 'visible'
 
    const section: any = document.getElementById('contaner2Style')
+
+
+   inputStyle.style.cursor = 'not-allowed'
+   inputStyle.disabled = true
+
+
+
    buttonBubbleChat2.style.borderBottom = '1px solid orange'
    search.style.border = '1px solid black'
    buttonBubbleChat2.style.borderRadius = '0px'
@@ -137,10 +157,12 @@ setTimeout(() => {
 ngOnInit(): void {
 
   const searchValue:any = document.getElementById('inputStyle')
+  const inputStyle:any = document.getElementById('inputStyle')
 searchValue.addEventListener('keypress', function (e: { key: string; }) {
     if (e.key === 'Enter') {
      const buttonSearch:any = document.getElementById('buttonSearch')
-  
+      inputStyle.style.cursor ='not-allowed'
+      inputStyle.disabled = true
 
    return  buttonSearch.click()
     }

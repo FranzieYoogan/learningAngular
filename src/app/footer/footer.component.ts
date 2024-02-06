@@ -12,7 +12,7 @@ export class FooterComponent {
     const spanCopyright: any = document.getElementById('spanCopyright')
 
     spanCopyright.classList.add('spanCopyright')
-    spanCopyright.transition = '0.5s'
+    spanCopyright.style.transition = '0.5s'
 
 
 
@@ -21,13 +21,11 @@ export class FooterComponent {
   copyrightsEventOut() {
 
     const spanCopyright: any = document.getElementById('spanCopyright')
+    const spanCopyright2: any = document.getElementById('spanCopyright')
 
-    setTimeout(() => {
-      spanCopyright.classList.remove('spanCopyright')
-    }, 60);
+  spanCopyright.classList.remove('spanCopyright')
+  spanCopyright2.classList.add('spanCopyright2')
 
-
-    
 
 
   }

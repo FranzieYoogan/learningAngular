@@ -55,6 +55,14 @@ font-weight: 900 !important;
   
 }
 
+.spanCopyright2 {
+    transition: 0.5s;
+    color: orange;
+
+    box-shadow:  none !important;
+    font-weight: 900;
+}
+
 
 
 footer {

@@ -31,12 +31,12 @@ export class HomeComponent {
 
     const buttonClose: any = document.getElementById('bubbleChatContainer')
     const section: any = document.getElementById('contaner2Style')
-
+    const search: any = document.getElementById('inputStyle')
     section.style.opacity = '1'
 
     buttonClose.style.visibility ='hidden'
 
-    localStorage.setItem('value','clicked')
+    search.style.border = '1px solid black'
 
     return buttonClose
   }
@@ -102,7 +102,7 @@ searchValue.addEventListener('keypress', function (e: { key: string; }) {
 
 }
 
-  getSearch() {
+  getSearch(): any {
 
 
 
@@ -116,12 +116,24 @@ searchValue.addEventListener('keypress', function (e: { key: string; }) {
     result != 'religion' &&  result != 'science' && result != 'sport' && result != 'travel' ) {
     
       search.style.border = '2px solid red'
-      setTimeout(() => {
-        window.location.reload()
-      
-   
 
-      }, 2000);
+
+
+
+
+   
+    var currentTime = new Date().toLocaleString()
+    const bubbleChat:any =  document.getElementById('bubbleChatContainer')
+    const span:any = document.getElementById('spanTime')
+  console.log(currentTime)
+   bubbleChat.style.visibility = 'visible'
+
+   const section: any = document.getElementById('contaner2Style')
+
+   section.style.opacity = '0.3'
+   return span.innerHTML = currentTime.toString()
+
+
         
          } if (result == 'animal' || result == 'career' || result == 'celebrity' || result == 'dev' || 
          result == 'explicit' || result == 'fashion' || result == 'food' || result == 'history' || 

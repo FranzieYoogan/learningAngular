@@ -131,6 +131,8 @@ width: 0%;
 }   
 
 
+
+
  .dropDownStyle:active, .dropDownStyle:focus {
 
 
@@ -293,3 +295,23 @@ width: 0%;
 
 
 }
+
+.dropdownMenuIconButton {
+
+    background-color: transparent !important;
+    border: 1px solid transparent !important;
+
+}
+
+.iconCloseStyle {
+
+    width: 32px;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .bubbleChatContainer2  {
+       position: absolute;
+       left: 1em;
+    }
+  }

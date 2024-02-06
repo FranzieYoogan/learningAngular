@@ -41,6 +41,20 @@ export class HomeComponent {
     return buttonClose
   }
 
+  closeMenu2() {
+
+    const categoriesButton: any = document.getElementById('dropdownDefaultButton')
+    const buttonBubbleChat2: any = document.getElementById('bubbleChatContainer2')
+    const section: any = document.getElementById('contaner2Style')
+
+    categoriesButton.style.borderBottom = '1px solid transparent'
+    categoriesButton.style.width = '0%'
+    categoriesButton.style.transition = '1s'
+    buttonBubbleChat2.style.visibility = 'hidden'
+    section.style.opacity ='1'
+
+  }
+
 
 
 
@@ -70,7 +84,7 @@ export class HomeComponent {
 
       
 
-   const search: any = document.getElementById('inputStyle')
+    const search: any = document.getElementById('inputStyle')
     const buttonBubbleChat2: any = document.getElementById('dropdownDefaultButton')
     const bubbleChat:any =  document.getElementById('bubbleChatContainer')
     var currentTime = new Date().toLocaleString()

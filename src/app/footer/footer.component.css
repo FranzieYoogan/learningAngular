@@ -38,7 +38,7 @@ font-weight: 900 !important;
 
 .linkMeStyle:hover{
 
-    transition: 0s;
+    transition: 0.5s;
     background: -webkit-linear-gradient(orange 50%, white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

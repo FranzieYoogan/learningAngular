@@ -7,7 +7,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 
 })
 export class AppComponent {
-  title = 'testing';
+  title = 'chuckNorrisCatchPhrases';
 
 
 

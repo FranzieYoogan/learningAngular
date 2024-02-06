@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
-
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -25,6 +25,7 @@ export class HomeComponent {
 
 
 
+  
 
 
   closeMenu() {
@@ -110,12 +111,36 @@ export class HomeComponent {
   }
 
 
+  @HostListener('window:load')
+onLoad() {
+  const titleMenu: any = document.getElementById('titleMenu')
+  const logoEvent: any = document.getElementById('logoEvent')
+  const dropDownMain:any = document.getElementById('dropDownMainMenuStyle')
+
+  titleMenu.position ='relative'
+  titleMenu.style.right = '-1px'
+  titleMenu.style.opacity = '1'
+  titleMenu.style.transition = '0.5s'
+  logoEvent.style.opacity = '1'
+  logoEvent.style.width = '50px'
+  dropDownMain.style.opacity = '1'
+  dropDownMain.style.transition = '0.5s'
+
+setTimeout(() => {
+  logoEvent.style.height = 'auto'
+}, 60);
+  logoEvent.style.transition = '0.5s'
+}
+
+
+
 ngOnInit(): void {
 
   const searchValue:any = document.getElementById('inputStyle')
 searchValue.addEventListener('keypress', function (e: { key: string; }) {
     if (e.key === 'Enter') {
      const buttonSearch:any = document.getElementById('buttonSearch')
+  
 
    return  buttonSearch.click()
     }

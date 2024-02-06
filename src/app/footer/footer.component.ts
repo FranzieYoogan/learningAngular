@@ -7,4 +7,26 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+  copyrightsEvent() {
+
+    const spanCopyright: any = document.getElementById('spanCopyright')
+
+    spanCopyright.classList.add('spanCopyright')
+
+
+
+
+  }
+
+  copyrightsEventOut() {
+
+    const spanCopyright: any = document.getElementById('spanCopyright')
+
+    spanCopyright.classList.remove('spanCopyright')
+
+    
+
+
+  }
+
 }

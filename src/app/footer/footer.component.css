@@ -29,21 +29,32 @@ font-weight: 900 !important;
 }
 
 .linkMeStyle {
-    transition: 0.5s;
+
     border-bottom: 1px solid orange;
     text-shadow: 2px 2px 2px black !important;
     box-shadow:  none !important;
     font-weight: 900;
 }
 
-.linkMeStyle:hover {
+.linkMeStyle:hover{
 
-    transition: 0.5s;
+ 
     background: -webkit-linear-gradient(orange 50%, white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: none!important;
+    text-shadow: 1px 1px 1px white !important;
+    border-bottom: 1px solid transparent;
 } 
+
+.spanCopyright {
+
+    background: -webkit-linear-gradient(orange 50%, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 1px white !important;
+    border-bottom: 1px solid transparent;
+}
+
 
 footer {
 

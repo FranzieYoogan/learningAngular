@@ -9,7 +9,7 @@ import { HostListener } from '@angular/core';
 })
 export class HomeComponent {
 
-  random = Math.floor(Math.random() * 10) + 1;
+  random = Math.floor(Math.random() * 3) + 1;
 
   dataSearch: any
   dataCategories: any

@@ -10,8 +10,9 @@ import { HostListener } from '@angular/core';
 export class HomeComponent {
 
   random = Math.floor(Math.random() * 10) + 1;
+
   dataSearch: any
-  categories: any
+  dataCategories: any
   constructor (private http: HttpClient) {}
   Math: any;
 
@@ -94,9 +95,43 @@ export class HomeComponent {
 
   }
 
+
+
+
+
+
   chuckTips2():any {
 
+
+    const spanResultCategories:any = document.getElementById('spanResultCategories')
+    const spanResultCategories2:any = document.getElementById('spanResultCategories2')
+    const spanResultCategories3:any = document.getElementById('spanResultCategories3')
+    const spanResultCategories4:any = document.getElementById('spanResultCategories4')
+
+      this.http.get(`https://api.chucknorris.io/jokes/categories`).subscribe((response) => {
+
+
+
       
+      console.log(response);
+   const result =   this.dataCategories = response
+    console.log("yaaaay", result.toString().substring(0,5))
+      spanResultCategories.innerHTML = this.dataCategories.toString().toUpperCase().substring(0,37)
+      spanResultCategories2.innerHTML =this.dataCategories.toString().toUpperCase().substring(37,70)
+      spanResultCategories3.innerHTML = this.dataCategories.toString().toUpperCase().substring(70,103)
+      spanResultCategories4.innerHTML = this.dataCategories.toString().toUpperCase().substring(103,115)
+  
+  
+    })
+    
+
+ 
+ 
+    
+    
+
+ 
+
 
     const search: any = document.getElementById('inputStyle')
     const buttonBubbleChat2: any = document.getElementById('dropdownDefaultButton')
@@ -105,6 +140,7 @@ export class HomeComponent {
     const bubbleChat2:any =  document.getElementById('bubbleChatContainer2')
     const span2:any = document.getElementById('spanTime2')
     const inputStyle:any = document.getElementById('inputStyle')
+    const categoriesResult:any = document.getElementById('categoriesResult')
 
   console.log(currentTime)
    bubbleChat2.style.visibility = 'visible'
@@ -124,7 +160,7 @@ export class HomeComponent {
    buttonBubbleChat2.style.transition = '1s'
    bubbleChat.style.visibility = 'hidden'
    section.style.opacity = '0.3'
-   return span2.innerHTML = currentTime.toString()
+   return    span2.innerHTML = currentTime.toString()
 
 
 
@@ -167,6 +203,21 @@ searchValue.addEventListener('keypress', function (e: { key: string; }) {
    return  buttonSearch.click()
     }
 });
+
+}
+
+eventMenuIcon2() {
+
+  const closeMenu2Icon: any = document.getElementById('closeMenu2Icon')
+
+  closeMenu2Icon.src = '/assets/img/icons/close.png'
+
+}
+
+eventMenuIcon2Out() {
+  const closeMenu2IconOut: any = document.getElementById('closeMenu2Icon')
+
+  closeMenu2IconOut.src = '/assets/img/icons/close2.png'
 
 }
 

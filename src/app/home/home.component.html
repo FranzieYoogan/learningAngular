@@ -135,16 +135,26 @@
          <span class="textColorBubbleChat2 text-sm font-semibold text-gray-900 dark:text-white">Chuck Norris</span>
          <span id="spanTime2" class="spanTime2 text-sm font-normal text-gray-500 dark:text-gray-400"></span>
       </div>
+  
       <p class="pBubbleChat2  text-sm font-normal py-2.5 text-gray-900 dark:text-white">then you wanna check some of my categories? HAHAHAH....
-      aqui estão elas: </p>
+      aqui estão elas: <br> <span class="categoriesResult" id="spanResultCategories"></span> <br> <span class="categoriesResult" id="spanResultCategories2"></span>  
+      <br> <span class="categoriesResult" id="spanResultCategories3"></span> <br> <span class="categoriesResult" id="spanResultCategories4"></span> </p>
+    
       <span class="text-sm font-normal text-green-500 dark:text-gray-400">Delivered</span>
    </div>
-   <button id="dropdownMenuIconButton" (click)="closeMenu2()"  class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-800 dark:focus:ring-gray-600" type="button">
+
+
+
       
-          <img class="iconCloseStyle" src="/assets/img/icons/close.png" alt="">
+   
+   <button id="dropdownMenuIconButton" (click)="closeMenu2()" (mouseover)="eventMenuIcon2()" (mouseout)="eventMenuIcon2Out()"  class="buttonClose2 inline-flex self-center items-center p-2 text-sm font-medium text-center  rounded-lg   dark:text-white focus:ring-gray-50 dark:bg-gray-900 " type="button">
+      
+          <img id="closeMenu2Icon"  class="iconCloseStyle" src="/assets/img/icons/close2.png" alt="">
      
    </button>
   
+
+
 </div>
 
     </div>

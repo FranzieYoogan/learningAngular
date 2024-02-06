@@ -265,7 +265,7 @@ eventMenuIcon2Out() {
 
     let search: any = document.getElementById('inputStyle')
     let text: any = document.getElementById('textId')
-    let result = search.value
+    let result = search.value.toLowerCase()
 
 
 
@@ -342,7 +342,7 @@ eventMenuIcon2Out() {
 
    const search2: any = document.getElementById('inputStyle2')
     const text2: any = document.getElementById('textId')
-   const result2 = search2.value
+   const result2 = search2.value.toLowerCase()
 
 
     if(result2 != 'animal' && result2 != 'career' && result2 != 'celebrity' && result2 != 'dev' && 

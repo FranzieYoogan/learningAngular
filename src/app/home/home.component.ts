@@ -70,17 +70,24 @@ export class HomeComponent {
 
       
 
-
-
-   
+   const search: any = document.getElementById('inputStyle')
+    const buttonBubbleChat2: any = document.getElementById('dropdownDefaultButton')
+    const bubbleChat:any =  document.getElementById('bubbleChatContainer')
     var currentTime = new Date().toLocaleString()
     const bubbleChat2:any =  document.getElementById('bubbleChatContainer2')
     const span2:any = document.getElementById('spanTime2')
+
+
   console.log(currentTime)
    bubbleChat2.style.visibility = 'visible'
 
    const section: any = document.getElementById('contaner2Style')
-
+   buttonBubbleChat2.style.borderBottom = '1px solid orange'
+   search.style.border = '1px solid black'
+   buttonBubbleChat2.style.borderRadius = '0px'
+   buttonBubbleChat2.style.width = '100%'
+   buttonBubbleChat2.style.transition = '1s'
+   bubbleChat.style.visibility = 'hidden'
    section.style.opacity = '0.3'
    return span2.innerHTML = currentTime.toString()
 

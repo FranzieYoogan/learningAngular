@@ -30,6 +30,16 @@ background-color: rgb(52, 153, 220);
 
 }
 
+.logoStyle:hover ~ .titleMenu{
+
+    transition: 0s !important;
+    background: -webkit-linear-gradient(orange 50%, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 1px white !important;
+
+}
+
 .titleMenu {
 
     width: 100%;    

@@ -210,7 +210,7 @@ ngOnInit(): void {
 
   const searchValue:any = document.getElementById('inputStyle')
   const searchValue2:any = document.getElementById('inputStyle2')
-
+const section: any = document.getElementById('contaner2Style')
   const bubbleChat:any =  document.getElementById('bubbleChatContainer')
 
 
@@ -227,6 +227,8 @@ ngOnInit(): void {
         searchValue.style.transition = '0s'
        buttonSearch.click()
     }  else {
+
+      section.style.opacity = 0.3
       searchValue.style.cursor ='not-allowed'
       searchValue.disabled = true
       searchValue.style.transition = '0s'
@@ -254,6 +256,7 @@ buttonSearch2.click()
     
 }
   else {
+    section.style.opacity = 0.3
     searchValue2.style.cursor ='not-allowed'
     searchValue2.disabled = true
     searchValue2.style.transition = '0s'

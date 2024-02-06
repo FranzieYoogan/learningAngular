@@ -71,9 +71,19 @@ visibility: hidden;
 text-shadow: 2px 2px 2px black;
 color: orange;
     font-size: 30px !important;
- 
+
 
 }
+
+.textId2 {
+
+    visibility: hidden;
+    text-shadow: 2px 2px 2px black;
+    color: orange;
+        font-size: 30px !important;
+   
+    
+    }
 
 .buttonStyle {
     transition: 1s;

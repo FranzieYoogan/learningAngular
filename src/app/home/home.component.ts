@@ -72,8 +72,8 @@ export class HomeComponent {
 
 
   chuckTips():any {
-    console.log(localStorage.getItem('value'))
-      if(!localStorage.getItem('value')) {
+  
+   
 
 
 
@@ -91,7 +91,7 @@ export class HomeComponent {
    section.style.opacity = '0.3'
    return span.innerHTML = currentTime.toString()
 
-} 
+
 
   }
 
@@ -193,18 +193,56 @@ setTimeout(() => {
 ngOnInit(): void {
 
   const searchValue:any = document.getElementById('inputStyle')
-  const inputStyle:any = document.getElementById('inputStyle')
-searchValue.addEventListener('keypress', function (e: { key: string; }) {
-    if (e.key === 'Enter') {
-     const buttonSearch:any = document.getElementById('buttonSearch')
-      inputStyle.style.cursor ='not-allowed'
-      inputStyle.disabled = true
+  const searchValue2:any = document.getElementById('inputStyle2')
 
-   return  buttonSearch.click()
+  const bubbleChat:any =  document.getElementById('bubbleChatContainer')
+
+
+
+
+
+    searchValue.addEventListener('keypress', function (e: { key: string; }) {
+      if (e.key === 'Enter') {
+        if(searchValue.value) {
+       const buttonSearch:any = document.getElementById('buttonSearch')
+        searchValue.style.cursor ='not-allowed'
+        searchValue.disabled = true
+        searchValue.style.border = '2px solid green'
+        searchValue.style.transition = '0s'
+       buttonSearch.click()
+    }  else {
+      bubbleChat.style.visibility ='visible'
+      searchValue.style.border = '2px solid red'
+
+
+
     }
+  } 
 });
 
-}
+  searchValue2.addEventListener('keypress', function (e: { key: string; }) {
+  if (e.key === 'Enter') {
+    const buttonSearch2:any = document.getElementById('buttonSearch2')
+     searchValue2.style.cursor ='not-allowed'
+     searchValue2.disabled = true
+
+buttonSearch2.click()
+
+  } else {
+    bubbleChat.style.visibility ='visible'
+    searchValue2.style.border = '2px solid red'
+
+
+  }
+
+    });
+
+
+
+    }
+  
+
+
 
 eventMenuIcon2() {
 
@@ -227,7 +265,9 @@ eventMenuIcon2Out() {
 
     let search: any = document.getElementById('inputStyle')
     let text: any = document.getElementById('textId')
-    const result = search.value
+    let result = search.value
+
+
 
     if(result != 'animal' && result != 'career' && result != 'celebrity' && result != 'dev' && 
     result != 'explicit' && result != 'fashion' && result != 'food' && result != 'history' && 
@@ -260,10 +300,7 @@ eventMenuIcon2Out() {
          result == 'religion' ||  result == 'science' || result == 'sport' || result == 'travel' ) {
 
 
-          search.style.border = '2px solid green'
-     
-      text.style.visibility = 'visible'
-    
+   
 
         
       
@@ -271,13 +308,94 @@ eventMenuIcon2Out() {
       
       console.log(response);
       this.dataSearch = response
-      
+      search.style.border = '2px solid green'
+     
+      text.style.visibility = 'visible'
+      text.innerHTML = this.dataSearch.result[this.random].value
       setTimeout(() => {
         window.location.reload()
         return this.dataSearch
      
     
-      }, 2000);
+      }, 4000);
+
+
+           
+    
+  
+      });
+
+
+ 
+ 
+    }
+
+    }
+
+
+    dataSearch2: any
+
+
+    getSearch2():any {
+
+
+
+   const search2: any = document.getElementById('inputStyle2')
+    const text2: any = document.getElementById('textId')
+   const result2 = search2.value
+
+
+    if(result2 != 'animal' && result2 != 'career' && result2 != 'celebrity' && result2 != 'dev' && 
+    result2 != 'explicit' && result2 != 'fashion' && result2 != 'food' && result2 != 'history' && 
+    result2 != 'money' && result2 != 'movie' && result2 != 'music' &&  result2 != 'political' &&  
+    result2 != 'religion' &&  result2 != 'science' && result2 != 'sport' && result2 != 'travel' ) {
+    
+      search2.style.border = '2px solid red'
+
+
+
+
+
+   
+    var currentTime = new Date().toLocaleString()
+    const bubbleChat:any =  document.getElementById('bubbleChatContainer')
+    const span:any = document.getElementById('spanTime')
+  console.log(currentTime)
+   bubbleChat.style.visibility = 'visible'
+
+   const section: any = document.getElementById('contaner2Style')
+
+   section.style.opacity = '0.3'
+   return span.innerHTML = currentTime.toString()
+
+
+        
+         } if (result2 == 'animal' || result2 == 'career' || result2 == 'celebrity' || result2 == 'dev' || 
+         result2 == 'explicit' || result2 == 'fashion' || result2 == 'food' || result2 == 'history' || 
+         result2 == 'money' || result2 == 'movie' || result2 == 'music' ||  result2 == 'political' ||  
+         result2 == 'religion' ||  result2 == 'science' || result2 == 'sport' || result2 == 'travel' ) {
+
+
+          search2.style.border = '2px solid green'
+     
+   
+    
+
+        
+      
+      this.http.get(`https://api.chucknorris.io/jokes/search?query=${result2}`).subscribe((response2) => {
+      
+      console.log(response2);
+      this.dataSearch2 = response2
+      console.log(this.dataSearch2.result[this.random].value)
+      text2.style.visibility = 'visible'
+      text2.innerHTML = this.dataSearch2.result[this.random].value
+      setTimeout(() => {
+        window.location.reload()
+        return this.dataSearch2
+     
+    
+      }, 4000);
 
 
            
@@ -303,4 +421,3 @@ eventMenuIcon2Out() {
 
 
     
-

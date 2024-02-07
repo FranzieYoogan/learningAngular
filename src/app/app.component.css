@@ -12,3 +12,28 @@
     font-family: pixel;
 
   }
+
+ /* You can add global styles to this file, and also import other style files */
+ body {
+
+  width: 100% !important;
+  height: 100% !important;
+
+} 
+
+footer {
+
+  position: relative;
+  top: 0 !important;
+  bottom: auto !important;
+  display: block;
+  
+}
+
+
+main {
+  position: relative;
+  width: 100% !important;
+  height: 100% !important;
+  display:block;
+}

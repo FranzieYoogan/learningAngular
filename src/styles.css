@@ -1,8 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+ body {
 
-/* body {
-
-    background: url('/assets/img/wallpaper.jpg') !important;
-    background-size: 100% !important;
     width: 100% !important;
-} */
+    height: 100% !important;
+    display: block;
+} 
+
+footer {
+
+    position: relative;
+    top: 0 !important;
+    bottom: 0 !important;
+    display: block;
+  }
+
+
+  main {
+
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+  }

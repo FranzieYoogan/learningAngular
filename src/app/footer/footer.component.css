@@ -68,9 +68,11 @@ font-weight: 900 !important;
 footer {
 
 
-    position: absolute;
-    bottom: auto !important;
+    position: relative !important;
+    bottom: 0 !important;
+        top: 0;
     margin: 0 !important;
     width: 100%;
-
+    display: block;
+    height: auto;
 }
